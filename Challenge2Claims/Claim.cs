@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Challenge2Claims
 {
-    class Claim
+    public class Claim
     {
+        int ClaimID;
+        List<string> ClaimType;
+        string Description;
+        double ClaimAmount;
+        DateTime DateOfIncident;
+        DateTime DateOfClaim;
+        bool IsValid;
     }
 }

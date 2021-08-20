@@ -1,0 +1,7 @@
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.exe.config
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.pdb
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\obj\Debug\Challenge1Cafe.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\obj\Debug\Challenge1Cafe.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\obj\Debug\GoldBadgeChallenges.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\GoldBadgeChallenges\obj\Debug\GoldBadgeChallenges.pdb

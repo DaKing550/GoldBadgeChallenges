@@ -14,6 +14,7 @@ namespace Challenge2Claims
     {
         static void Main(string[] args)
         {
+            // need to make a claim class
         }
     }
 }

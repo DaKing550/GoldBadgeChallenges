@@ -14,10 +14,18 @@ namespace GoldBadgeChallenges
             Menus.Add(newMenu);
 
         }
-        public void RemoveMenu(Menu)
-        {
 
+        public void RemoveMenu(Menu menu)
+        {
+            Menus.Remove(menu);
         }
+
+        public void RemoveMenuById(int menuNum)
+        {
+            var result = Menus.First(m => m.menuNumber == menuNum);
+            RemoveMenu(result);
+        }
+
         public void ListMenus()
         {
             foreach (Menu newMenu in Menus)

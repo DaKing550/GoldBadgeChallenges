@@ -11,7 +11,7 @@ namespace GoldBadgeChallenges
     //output - showing to the user
     public class Menu 
     {
-        int menuNumber { get; }
+        public int menuNumber { get; }
         string mealName { get; }
         string foodDesc { get; }
         List<string> ingredients { get; }
@@ -25,6 +25,10 @@ namespace GoldBadgeChallenges
             this.ingredients = ingredients;
             this.price = price;
             
+        }
+        public override string ToString()
+        {
+            return $"{menuNumber},\n{mealName},\n{foodDesc},\n${price}";
         }
 
     }

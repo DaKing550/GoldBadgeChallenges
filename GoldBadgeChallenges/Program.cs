@@ -14,8 +14,30 @@ namespace GoldBadgeChallenges
     {
         static void Main(string[] args)
         {
+
+            //be able to put in a single menu and output all menus
+            // a ui for the manager to access and use the repository
+
+            var menu = MakeMenu();
+            MenuRepository listOfMenus = new MenuRepository();
+            listOfMenus.AddMenu(menu);
+            listOfMenus.ListMenus();
+
+            Console.ReadLine();
+        }
+
+        private static Menu MakeMenu()
+        {
+            var menuNum = 1;
+            var mealName = "Spaghetti and Meatballs";
+            var foodDesc = "Its mom's spaghetti";
+            var ingredients = new List<string> { "spaghetti", "meatballs" };
+            var price = 1.00;
+
+            var menu = new Menu(menuNum, mealName, foodDesc, ingredients, price);
+            return menu;
             
-            //Menu needs to list all the meals given to it
+
         }
     }
 }
