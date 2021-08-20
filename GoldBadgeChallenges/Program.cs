@@ -33,7 +33,7 @@ namespace GoldBadgeChallenges
             var foodDesc = "Its mom's spaghetti";
             var ingredients = new List<string> { "spaghetti", "meatballs" };
             var price = 1.00;
-
+            
             var menu = new Menu(menuNum, mealName, foodDesc, ingredients, price);
             return menu;
             

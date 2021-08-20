@@ -28,7 +28,12 @@ namespace GoldBadgeChallenges
         }
         public override string ToString()
         {
-            return $"{menuNumber},\n{mealName},\n{foodDesc},\n${price}";
+            StringBuilder sb = new StringBuilder();
+            foreach (var ingredient in ingredients)
+            {
+            sb.AppendLine($"organic {ingredient}");
+            }
+            return $"{menuNumber},\n{mealName},\n{foodDesc},\n${price},\n{sb.ToString()}";
         }
 
     }
