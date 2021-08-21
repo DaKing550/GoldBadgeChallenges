@@ -31,7 +31,7 @@ namespace GoldBadgeChallenges
             StringBuilder ingredientList = new StringBuilder();
             foreach (var ingredient in ingredients)
             {
-            ingredientList.AppendLine($"Mom's {ingredient}");
+                ingredientList.AppendLine($"{ingredient}");
             }
             return $"{menuNumber},\n{mealName},\n{foodDesc},\n${price},\n{ingredientList.ToString()}";
         }

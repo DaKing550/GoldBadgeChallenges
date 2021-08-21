@@ -11,60 +11,34 @@ namespace GoldBadgeChallenges
     //Create a Program file that allows the cafe manager to add, delete, and see all items in the menu list.
     class Program
     {
+        static int MenuCount = 0;
         static void Main(string[] args)
         {
 
             //be able to put in a single menu and output all menus
             // a ui for the manager to access and use the repository
-
-            var menu = MakeMenu();
-            var menu2 = MakeMenu(2);
-            var usermenu = EnterMenu(3);
+            var usermenu = EnterMenu();
             MenuRepository listOfMenus = new MenuRepository();
-            listOfMenus.AddMenu(menu);
-            listOfMenus.AddMenu(menu2);
-            listOfMenus.AddMenu(usermenu);
+            AddMenuItem(usermenu, listOfMenus);
             listOfMenus.ListMenus();
-
             Console.ReadLine();
         }
 
-        private static Menu MakeMenu()
+        private static void AddMenuItem(Menu menu, MenuRepository listOfMenus)
         {
-            var menuNum = 1;
-            var mealName = "Spaghetti and Meatballs";
-            var foodDesc = "Its mom's spaghetti";
-            var ingredients = new List<string> { "spaghetti", "meatballs" };
-            var price = 1.00;
-            
-            var menu = new Menu(menuNum, mealName, foodDesc, ingredients, price);
-            return menu;
-            
-
+            listOfMenus.AddMenu(menu);
+            MenuCount++;
         }
-        private static Menu MakeMenu(int menuNum)
-        {
-            var mealName = $"{menuNum}Spaghetti and Meatballs";
-            var foodDesc = $"{menuNum}Its mom's spaghetti";
-            var ingredients = new List<string> { "spaghetti", "meatballs" };
-            var price = 1.00;
-
-            var menu = new Menu(menuNum, mealName, foodDesc, ingredients, price);
-            return menu;
-
-
-        }
-        private static Menu EnterMenu(int menuNum)
+        
+        private static Menu EnterMenu()
         {
       
             var mealName = prompt("enter meal name");
-
-
             var foodDesc = prompt("enter description of meal");
-            var ingredients = new List<string> { "spaghetti", "meatballs" };
-            var price = int.Parse(prompt("enter the price"));
+            var ingredients = IngredientEntry();
+            var price = double.Parse(prompt("enter the price"));
 
-            var menu = new Menu(menuNum, mealName, foodDesc, ingredients, price);
+            var menu = new Menu(MenuCount, mealName, foodDesc, ingredients, price);
             return menu;
 
 
@@ -73,6 +47,26 @@ namespace GoldBadgeChallenges
         {
             Console.WriteLine(message);
             return Console.ReadLine();
+
+        }
+        private static List<string> IngredientEntry()
+        {
+            List<string> ingredients = new List<string>();
+            bool addMoreToList = true;
+            while (addMoreToList)
+            {
+                string ingredient = prompt("Add ingredients, leave blank to end");
+                if(ingredient == string.Empty)
+                {
+                    addMoreToList = false;
+                    
+                }
+                else
+                {
+                    ingredients.Add(ingredient);
+                }
+            }
+            return ingredients;
 
         }
     }
