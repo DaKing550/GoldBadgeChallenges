@@ -11,17 +11,49 @@ namespace GoldBadgeChallenges
     //Create a Program file that allows the cafe manager to add, delete, and see all items in the menu list.
     class Program
     {
-        static int MenuCount = 0;
+        static int MenuCount = 1;
         static void Main(string[] args)
         {
-
-            //be able to put in a single menu and output all menus
-            // a ui for the manager to access and use the repository
-            var usermenu = EnterMenu();
             MenuRepository listOfMenus = new MenuRepository();
-            AddMenuItem(usermenu, listOfMenus);
-            listOfMenus.ListMenus();
-            Console.ReadLine();
+            var running = true;
+            StringBuilder menuOptions = new StringBuilder();
+            menuOptions.AppendLine("1. Add a Meal");
+            menuOptions.AppendLine("2. Look Up a Meal");
+            menuOptions.AppendLine("3. Remove a Meal");
+            menuOptions.AppendLine("4. Quit");
+
+            while (running)
+            {
+                var chosenAction = prompt(menuOptions.ToString());
+                Console.WriteLine();
+                if (chosenAction == "1")
+                {
+                    var usermenu = EnterMenu();
+                    AddMenuItem(usermenu, listOfMenus);
+                }
+                else if (chosenAction == "2")
+                {
+                    listOfMenus.ListMenus();
+                    Console.ReadLine();
+                }
+                else if (chosenAction == "3")
+                {
+                    var removeId = prompt("Which Number Would You like to Remove? ");
+                        listOfMenus.RemoveMenuById(int.Parse(removeId));
+                }
+                else if(chosenAction == "4")
+                {
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("Could Not Recognize Command");
+                }
+                
+            }
+            
+            // a ui for the manager to access and use the repository
+
         }
 
         private static void AddMenuItem(Menu menu, MenuRepository listOfMenus)

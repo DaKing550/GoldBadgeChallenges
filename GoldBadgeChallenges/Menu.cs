@@ -33,7 +33,12 @@ namespace GoldBadgeChallenges
             {
                 ingredientList.AppendLine($"{ingredient}");
             }
-            return $"{menuNumber},\n{mealName},\n{foodDesc},\n${price},\n{ingredientList.ToString()}";
+            return $"Menu Number: {menuNumber},\n" +
+                $"Meal name: {mealName},\n" +
+                $"Description: {foodDesc},\n" +
+                $"${price},\n" +
+                $"Ingredients:\n" +
+                $"{ingredientList.ToString()}";
         }
 
     }
