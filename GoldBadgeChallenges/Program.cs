@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace GoldBadgeChallenges
 {
-    //Create a MenuRepository Class that has methods needed.
+    
     //Create a Test Class for your repository methods. (You don't need to test your constructors or objects, just your methods)
-    //Create a Program file that allows the cafe manager to add, delete, and see all items in the menu list.
     class Program
     {
         static int MenuCount = 1;
@@ -33,7 +32,7 @@ namespace GoldBadgeChallenges
                 }
                 else if (chosenAction == "2")
                 {
-                    listOfMenus.ListMenus();
+                    Console.WriteLine(listOfMenus.ListMenus());
                     Console.ReadLine();
                 }
                 else if (chosenAction == "3")

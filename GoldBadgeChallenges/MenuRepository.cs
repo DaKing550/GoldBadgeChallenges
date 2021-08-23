@@ -9,6 +9,7 @@ namespace GoldBadgeChallenges
     public class MenuRepository
     {
         List<Menu> Menus = new List<Menu>();
+        public IReadOnlyList<Menu> CurrentMenu => this.Menus;
         public void AddMenu(Menu newMenu)
         {
             Menus.Add(newMenu);
@@ -26,12 +27,18 @@ namespace GoldBadgeChallenges
             RemoveMenu(result);
         }
 
-        public void ListMenus()
+        public string ListMenus()
         {
+            var menuItems = new StringBuilder();
             foreach (Menu newMenu in Menus)
             {
-                Console.WriteLine($"{newMenu}");
+                menuItems.AppendLine(newMenu.ToString());
+                //Console.WriteLine($"{newMenu}");
             }
+
+            // Append: string.Empty + "TheInformationYouAdded" + "Morestuff"
+            // AppendLine: "TheInformationYouAdded" + "/n" + "MoreStuff
+            return menuItems.ToString();
         }
 
     }
