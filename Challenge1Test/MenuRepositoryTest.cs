@@ -27,11 +27,29 @@ namespace Challenge1Test
         {
             //Arrange
             MenuRepository testRemoveRepo = new MenuRepository();
-            Menu menu = new Menu(1, "das", "a", new List<string> { "good", "one" }, 420.69);
+            Menu menu = BasicMenu(1);
             //Act
             testRemoveRepo.RemoveMenu(menu);
             //Assert
             Assert.AreEqual(0, testRemoveRepo.CurrentMenu.Count);
+        }
+
+        private static Menu BasicMenu(int menuID)
+        {
+            return new Menu(menuID, "das", "a", new List<string> { "good", "one" }, 420.69);
+        }
+
+        [TestMethod]
+        public void RemoveMenuByID_WhenRemovingMenuByID_ShouldRemoveAMenuByID()
+        {
+            //Arrange
+            MenuRepository testRemoveID = new MenuRepository();
+            Menu menu = BasicMenu(1);
+            testRemoveID.AddMenu(menu);
+            //Act
+            testRemoveID.RemoveMenuById(1);
+            //Assert
+            Assert.AreEqual(0, testRemoveID.CurrentMenu.Count);
         }
 
         [TestMethod]

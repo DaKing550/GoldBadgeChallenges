@@ -59,9 +59,12 @@ namespace Challenge2Test
         {
             //Arrange
             ClaimRepository testDealClaim = new ClaimRepository();
+            Claim claim = MakeBasicClaim(1);
+            testDealClaim.AddClaim(claim);
             //Act
-
+            testDealClaim.DealClaim();
             //Assert
+            Assert.AreEqual(1, testDealClaim.CurrentClaim.Count);
         }
         [TestMethod]
         public void RemoveClaim_WhenRemoveAClaim_ShouldRemoveAClaim()
