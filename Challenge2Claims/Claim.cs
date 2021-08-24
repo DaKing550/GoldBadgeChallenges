@@ -6,14 +6,59 @@ using System.Threading.Tasks;
 
 namespace Challenge2Claims
 {
+    //1. Create a Claim class with properties, constructors, and any necessary fields.
+    //2. Create a ClaimRepository class that has proper methods.
+    //3. Create a Test Class for your repository methods.
+    //4. Create a Program file that allows a claims manager to manage items in a list of claims.
     public class Claim
     {
-        int ClaimID;
-        List<string> ClaimType;
-        string Description;
-        double ClaimAmount;
-        DateTime DateOfIncident;
-        DateTime DateOfClaim;
-        bool IsValid;
+        public int ClaimID { get; }
+
+        public string ClaimType { get; }
+
+        public string Description { get; set; }
+
+        public double ClaimAmount { get; set; }
+
+        DateTime DateOfIncident { get; }
+
+        DateTime DateOfClaim { get; }
+
+        public bool IsValid { get; set; }
+
+        public Claim(
+            int ClaimID, 
+            string ClaimType, 
+            string Description, 
+            double ClaimAmount, 
+            DateTime DateOfIncident, 
+            DateTime DateOfClaim, 
+            bool IsValid)
+        {
+            this.ClaimID = ClaimID;
+            this.ClaimType = ClaimType;
+            this.Description = Description;
+            this.ClaimAmount = ClaimAmount;
+            this.DateOfIncident = DateOfIncident;
+            this.DateOfClaim = DateOfClaim;
+            this.IsValid = IsValid;
+        }
+        public override string ToString()
+        {
+            return "Claim ID:\t" +
+                "Claim type:\t" +
+                "Description:\t" +
+                "Claim Amount\t" +
+                "Date Of Incident\t" +
+                "Date Of Claim\t\t" +
+                "IsValid\n" +
+                $"{ClaimID},\t\t" +
+                $"{ClaimType},\t\t" +
+                $"{Description},\t\t" +
+                $"${ClaimAmount},\t\t" +
+                $"{DateOfIncident}\t" +
+                $"{DateOfClaim}\t" +
+                $"{IsValid}";
+        }
     }
 }

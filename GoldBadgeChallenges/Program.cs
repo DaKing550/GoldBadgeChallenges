@@ -50,8 +50,6 @@ namespace GoldBadgeChallenges
                 }
                 
             }
-            
-            // a ui for the manager to access and use the repository
 
         }
 

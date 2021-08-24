@@ -1,0 +1,7 @@
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\bin\Debug\Challenge2Claims.exe.config
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\bin\Debug\Challenge2Claims.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\bin\Debug\Challenge2Claims.pdb
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\obj\Debug\Challenge2Claims.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\obj\Debug\Challenge2Claims.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\obj\Debug\Challenge2Claims.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge2Claims\obj\Debug\Challenge2Claims.pdb

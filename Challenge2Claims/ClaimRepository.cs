@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,20 +18,34 @@ namespace Challenge2Claims
         public string ListClaims()
         {
             var claimItems = new StringBuilder();
-            foreach (Claim claim in Claims)
+            foreach (Claim Claim in Claims)
             {
-                claimItems.AppendLine(newClaim.ToString());
+                claimItems.AppendLine(Claim.ToString());
             }
-        }
 
-        public void RemoveClaim()
+            return claimItems.ToString();
+        }
+        public string DealClaim()
+        {
+            var queue = Claims.First();
+            return queue.ToString();
+        }
+        public void RemoveClaim(Claim claim)
         {
             Claims.Remove(claim);
         }
 
-        public void UpdateClaim()
+        public void RemoveClaimFromTop()
         {
-
+            
+            var result = Claims.First();
+            RemoveClaim(result);
+        }
+       
+        public Claim GetClaimbyID(int ClaimID)
+        {
+            var result = Claims.First(c => c.ClaimID == ClaimID);
+            return result;
         }
     }
 }
