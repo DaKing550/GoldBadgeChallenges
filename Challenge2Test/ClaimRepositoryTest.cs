@@ -71,18 +71,24 @@ namespace Challenge2Test
         {
             //Arrange
             ClaimRepository testRemoveClaim = new ClaimRepository();
+            Claim claim = MakeBasicClaim(1);
+            testRemoveClaim.AddClaim(claim);
             //Act
-
+            testRemoveClaim.RemoveClaim(claim);
             //Assert
+            Assert.AreEqual(0, testRemoveClaim.CurrentClaim.Count);
         }
         [TestMethod]
         public void RemoveClaimFromTop_WhenRemovingAClaimFromTheTop_ShouldRemoveAClaimFromTheTop()
         {
             //Arrange
             ClaimRepository testTopRemove = new ClaimRepository();
+            Claim claim = MakeBasicClaim(1);
+            testTopRemove.AddClaim(claim);
             //Act
-
+            testTopRemove.RemoveClaimFromTop();
             //Assert
+            Assert.AreEqual(0, testTopRemove.CurrentClaim.Count);
         }
     }
 }
