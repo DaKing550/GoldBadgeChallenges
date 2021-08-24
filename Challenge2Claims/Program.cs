@@ -72,7 +72,7 @@ namespace Challenge2Claims
             var time = DateOfIncident - DateOfClaim;
             var Isvalid = time.Days <= 30;
 
-            var claim = new Claim(claimID, claimType, claimDesc, claimAmount, DateOfIncident, DateOfClaim, Isvalid);
+            var claim = new Claim(claimID, claimType, claimDesc, claimAmount, DateOfIncident, DateOfClaim);
                 return claim;
 
 
@@ -90,12 +90,13 @@ namespace Challenge2Claims
 
         }
         private static string TypeEntry()
-        {    
+        {
+            string Types = "unassigned";
             Console.WriteLine("please enter Claim Type: Car, Home, or Theft.");
-            var Types = Console.ReadLine().ToLower();
             bool enteringType = true;
             while (enteringType)
             { 
+                Types = Console.ReadLine().ToLower();
                 if (Types == "car")
                 {                   
                     enteringType = false;
@@ -112,6 +113,7 @@ namespace Challenge2Claims
                 else
                 {
                     Console.WriteLine("Invalid Type try again");
+
                 }
 
             }

@@ -1,0 +1,7 @@
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\bin\Debug\Challenge3Badges.exe.config
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\bin\Debug\Challenge3Badges.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\bin\Debug\Challenge3Badges.pdb
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\obj\Debug\Challenge3Badges.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\obj\Debug\Challenge3Badges.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\obj\Debug\Challenge3Badges.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Badges\obj\Debug\Challenge3Badges.pdb

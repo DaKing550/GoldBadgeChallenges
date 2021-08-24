@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Challenge2Claims
 {
-    class ClaimRepository
+    public class ClaimRepository
     {
         List<Claim> Claims = new List<Claim>();
+        public IReadOnlyList<Claim> CurrentClaim => this.Claims;
 
         public void AddClaim(Claim newClaim)
         {
@@ -42,10 +43,5 @@ namespace Challenge2Claims
             RemoveClaim(result);
         }
        
-        public Claim GetClaimbyID(int ClaimID)
-        {
-            var result = Claims.First(c => c.ClaimID == ClaimID);
-            return result;
-        }
     }
 }

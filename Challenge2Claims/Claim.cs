@@ -24,7 +24,15 @@ namespace Challenge2Claims
 
         DateTime DateOfClaim { get; }
 
-        public bool IsValid { get; set; }
+        public bool IsValid
+        {
+            get
+            {
+                var time = DateOfIncident - DateOfClaim;
+                var Isvalid = time.Days <= 30; //magic number for the current limit of time span
+                return Isvalid;
+            }
+        }
 
         public Claim(
             int ClaimID, 
@@ -32,8 +40,8 @@ namespace Challenge2Claims
             string Description, 
             double ClaimAmount, 
             DateTime DateOfIncident, 
-            DateTime DateOfClaim, 
-            bool IsValid)
+            DateTime DateOfClaim)
+            
         {
             this.ClaimID = ClaimID;
             this.ClaimType = ClaimType;
@@ -41,7 +49,7 @@ namespace Challenge2Claims
             this.ClaimAmount = ClaimAmount;
             this.DateOfIncident = DateOfIncident;
             this.DateOfClaim = DateOfClaim;
-            this.IsValid = IsValid;
+            
         }
         public override string ToString()
         {
@@ -56,8 +64,8 @@ namespace Challenge2Claims
                 $"{ClaimType},\t\t" +
                 $"{Description},\t\t" +
                 $"${ClaimAmount},\t\t" +
-                $"{DateOfIncident}\t" +
-                $"{DateOfClaim}\t" +
+                $"{DateOfIncident.ToString("d")}\t" +
+                $"{DateOfClaim.ToString("d")}\t" +
                 $"{IsValid}";
         }
     }
