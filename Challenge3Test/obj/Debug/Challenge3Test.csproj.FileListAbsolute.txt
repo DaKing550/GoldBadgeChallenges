@@ -12,3 +12,6 @@ C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\obj\Debug\Challen
 C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\obj\Debug\Challenge3Test.csproj.CopyComplete
 C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\obj\Debug\Challenge3Test.dll
 C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\obj\Debug\Challenge3Test.pdb
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\bin\Debug\Challenge3Badges.exe
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\bin\Debug\Challenge3Badges.pdb
+C:\Users\David\source\repos\GoldBadgeChallenges\Challenge3Test\bin\Debug\Challenge3Badges.exe.config

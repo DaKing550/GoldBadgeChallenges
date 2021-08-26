@@ -26,6 +26,7 @@ namespace Challenge3Badges
             BadgeRepository listOfBadges = new BadgeRepository();
             var running = true;
             StringBuilder BadgeOptions = new StringBuilder();
+            Console.WriteLine("Hello Security Admin, what would you like to do?");
             BadgeOptions.AppendLine("1. Add a Badge");
             BadgeOptions.AppendLine("2. List all Badges");
             BadgeOptions.AppendLine("3. Edit a Badge");

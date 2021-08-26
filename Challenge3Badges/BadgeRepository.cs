@@ -8,7 +8,8 @@ namespace Challenge3Badges
 {
     public class BadgeRepository
     {
-        Dictionary<int, List<string>> DictionaryOfBadges = new Dictionary<int, List<string>>();
+       
+       public Dictionary<int, List<string>> DictionaryOfBadges = new Dictionary<int, List<string>>();
         
 
         public void AddBadge(Badge newBadge)

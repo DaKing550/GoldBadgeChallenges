@@ -10,6 +10,13 @@ namespace Challenge3Badges
     {
         public int badgeID { get; set; }
         public List<string> DoorAccess { get; set; }
+        public Badge()
+        {
+
+        }
+        public Badge(int badgeID)
+        {
+                this.badgeID = badgeID;
+        }
     }
-    
 }
