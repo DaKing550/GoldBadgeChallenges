@@ -41,7 +41,7 @@ namespace Challenge3Badges
                     {
                     var userBadge = EnterBadge();
                     AddBadgeItem(userBadge, listOfBadges);
-
+                    
                     }
                 }
                 else if (chosenAction == "2")
@@ -115,6 +115,7 @@ namespace Challenge3Badges
         {
             var badgeID = BadgeCount;
             var badge = new Badge();
+            badge.badgeID = badgeID;
             return badge;
         }
         private static void AddBadgeItem(Badge badge, BadgeRepository listOfBadges)

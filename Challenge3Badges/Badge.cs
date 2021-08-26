@@ -11,4 +11,5 @@ namespace Challenge3Badges
         public int badgeID { get; set; }
         public List<string> DoorAccess { get; set; }
     }
+    
 }

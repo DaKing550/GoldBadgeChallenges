@@ -13,7 +13,7 @@ namespace Challenge3Badges
 
         public void AddBadge(Badge newBadge)
         {
-            DictionaryOfBadges.Add(newBadge.badgeID, newBadge.DoorAccess);
+            DictionaryOfBadges.Add(newBadge.badgeID, new List<string>());
         }
 
         public void AddDoorToBadge(int badgeId, string door)
@@ -22,6 +22,10 @@ namespace Challenge3Badges
             if (!DictionaryOfBadges.ContainsKey(badgeId))
             {
                 DictionaryOfBadges.Add(badgeId, new List<string>());                
+            }
+            if(DictionaryOfBadges[badgeId] == null)
+            {
+                DictionaryOfBadges[badgeId] = new List<string>();
             }
             DictionaryOfBadges[badgeId].Add(door);
 
@@ -40,9 +44,17 @@ namespace Challenge3Badges
         public string ListBadges()
         {
             var badgeItems = new StringBuilder();
+            Console.WriteLine("ID#\t Door Access");
             foreach(KeyValuePair<int, List<string>> badge in DictionaryOfBadges)
             {
-                badgeItems.AppendLine(badge.ToString());
+                badgeItems.Append($"{badge.Key.ToString()}\t");
+                foreach(var door in badge.Value)
+                {
+                   badgeItems.Append($"{door}, ");
+                }
+                badgeItems.AppendLine();
+                
+                //badgeItems.AppendLine(badge.ToString());
             }
             return badgeItems.ToString();
         }
