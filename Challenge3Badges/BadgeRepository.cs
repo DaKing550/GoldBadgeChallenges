@@ -51,7 +51,7 @@ namespace Challenge3Badges
                 badgeItems.Append($"{badge.Key.ToString()}\t");
                 foreach(var door in badge.Value)
                 {
-                   badgeItems.Append($"{door}, ");
+                   badgeItems.Append($"{door},");
                 }
                 badgeItems.AppendLine();
                 
